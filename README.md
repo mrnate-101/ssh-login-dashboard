@@ -1,6 +1,27 @@
 # SSH Login Explorer
 
-Working educational prototype for Nathaniel Addai Gyarteng and Autenia Murray, Group 8. Built with Python, pandas, Plotly and Streamlit, with Codex assistance.
+Educational investigation workspace for Nathaniel Addai Gyarteng and Autenia Murray, Group 8. Built with Python, pandas, Plotly and Streamlit, with Codex assistance.
+
+Public app: https://ssh-activity-group8.streamlit.app/
+
+## Workspaces
+
+- Overview: large source rankings, summary counts, time distribution, and a leading-address case shortcut.
+- Investigation: username ranking, selectable time bins, original-message inspection, session notes, and a downloadable Markdown report.
+- Pattern analysis: time heatmap, address-to-username Sankey flow, username-diversity profiles, and aligned two-address timelines.
+- Evidence: literal message search, exact-subset CSV export, and downloadable filter metadata.
+- Classroom: 30-minute lesson, three-question practice activity, worksheet download, instructor rubric, and proposed school rollout.
+- Methodology: provenance, parser checks, separate repeat summaries, and interpretation limits.
+
+The four analytical pages share IP, username, time, and message-account-label filters. Classroom exercises deliberately use the full sample. Small IP/username categories are grouped in the Sankey, preserving all selected records. Heatmaps show the leading 12 IPs and state that limit. No VM attack experiment is included.
+
+## Verification
+
+```sh
+python -m unittest discover -s . -p 'test_dashboard.py' -v
+```
+
+Checks cover parser counts, aggregation conservation, all pages and chart modes, combined filters, empty results, evidence search, reset, and classroom answer checking. These are software checks, not user-study results.
 
 ## Run locally
 
